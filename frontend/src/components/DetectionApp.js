@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react';
 import '../DetectionApp.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const FileUploader = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -117,14 +119,25 @@ const FileUploader = () => {
 
   return (
     <div className="container">
-      <div className="spectacledcoder-navbar">
+      {/* <div className="spectacledcoder-navbar">
         <div className="brand">
-          <h1>DeepFake Detector</h1>
+        <a className="navbar-brand" href="/" style={{ color: '#7b2cbf' , fontSize: '22px'  }}>
+            <strong>DeepFake Detector <i className="bi bi-shield-check"></i></strong>
+          </a>
         </div>
         <ul>
           
         </ul>
-      </div>
+      </div> */}
+   <nav className="navbar navbar-expand-lg p-4" style={{ backgroundColor: '#222222' }}>
+        <div className="container">
+      
+          <a className="navbar-brand" href="/" style={{ color: '#7b2cbf' }}>
+            <strong>DeepFake Detector <i className="bi bi-shield-check"></i></strong>
+          </a>
+
+        </div>
+      </nav>
 
       <div className="section">
         <h2>Check Image for Deepfake</h2>
